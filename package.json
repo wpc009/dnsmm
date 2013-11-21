@@ -1,0 +1,39 @@
+{
+	"name": "dnsmm",
+	"version": "0.0.1",
+	"description": "A Dns Relay Sever writen in Nodejs",
+	"license": "MIT",
+	"keywords": ["dns", "relay"],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wpc009/dnsmm"
+	},
+	"homepage": "https://github.com/wpc009/dnsmm",
+	"bugs": {
+		"email": "wpc009+bugs@gmail.com",
+		"url": "https://github.com/wpc009/dnsmm/issues"
+	},
+	"author": "Pengcheng Wang <wpc009@gmail.com>",
+	"contributors": ["Pengcheng Wang <wpc009@gmail.com>"],
+	"dependencies": {
+		"native-dns": "*",
+		"native-dns-packet":"*",
+		"log4js":"*",
+		"underscore":"*"
+	},
+	"devDependencies": {
+		"mocha": "1.3.x",
+		"jshint": "*"
+	},
+	"jshintConfig": {
+		"unused": false,
+		"undef": true,
+		"node": true
+	},
+	"scripts": {
+		"test": "mocha --harmony  --ui tdd --growl --reporter spec "
+	},
+	"engines": ["node >= 0.7.8"],
+	"main": "./lib/server.js",
+	"optionalDependencies": {}
+}

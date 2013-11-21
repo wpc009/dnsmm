@@ -1,0 +1,20 @@
+{
+"upstream" : { "address":"202.120.2.101"},
+"mappings" : [
+{
+	"regx": "[\\w]+\\.google\\.com",
+	"type": "redirect",
+	"value": "www.google.cn"
+},
+{
+	"regx" : "www\\.innoxyz\\.com",
+	"type" : "redirect",
+	"value":"www.innoxyz.com"
+},
+{
+	"regx": "[\\w]+\\.innoxyz\\.com",
+	"type": "address",
+	"value": "192.168.1.3"
+}
+]
+}
