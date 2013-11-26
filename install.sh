@@ -7,18 +7,29 @@ fi
 
 DNSMM_HOME=/usr/local/lib
 
-mkdir $DNSMM_HOME/dnsmm
+if [ ! -d '$DNSMM_HOME/dnsmm' ]; then
+	 mkdir $DNSMM_HOME/dnsmm
+fi
 
 cp -R lib  $DNSMM_HOME/dnsmm/
 
 cp -R node_modules $DNSMM_HOME/dnsmm/
 
-mkdir /etc/dnsmm
-cp -R conf /etc/dnsmm/
+if [ ! -d '/etc/dnsmm' ]; then
+	mkdir /etc/dnsmm
+fi
 
-cp dnsmm.conf /etc/init/dnsmm.conf
+if [ ! -f '/etc/dnsmm/conf/dnsmm.json' ]; then 
+	cp -R conf /etc/dnsmm/
+fi
+
+if [ ! -f '/etc/init/dnsmm.conf' ]; then 
+	cp dnsmm.conf /etc/init/dnsmm.conf
+fi
 
 # make logging dir
-mkdir /var/log/dnsmm
-chown www-data /var/log/dnsmm
+if [ ! -d '/var/log/dnsmm' ]; then
+	mkdir /var/log/dnsmm
+	chown www-data /var/log/dnsmm
+fi
 
