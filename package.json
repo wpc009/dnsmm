@@ -1,6 +1,6 @@
 {
 	"name": "dnsmm",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A Dns Relay Sever writen in Nodejs",
 	"license": "MIT",
 	"keywords": ["dns", "relay"],
