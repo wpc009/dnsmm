@@ -1,32 +1,17 @@
 {
-"upstream" : { "address":"202.120.2.101"},
+"upstream" : { "address":"101.226.4.6"},
 "logging" : {
 "level":"DEBUG",
 	"appenders" :[
 {"type":"file",
 "filename":"/var/log/dnsmm/dnsmm.log",
-"maxLogSize" : 1024,
+"maxLogSize" : 65535,
 "backups":3,
 "replaceConsole":true
 }
 ]
 },
 "mappings" : [
-{
-	"regx": "[\\w]+\\.google\\.com",
-	"type": "redirect",
-	"value": "www.google.cn"
-},
-{
-	"regx" : "www\\.innoxyz\\.com",
-	"type" : "redirect",
-	"value":"www.innoxyz.com"
-},
-{
-	"regx": "[\\w]+\\.innoxyz\\.com",
-	"type": "address",
-	"value": "192.168.1.3"
-}
 ],
 "port":8053
 }
