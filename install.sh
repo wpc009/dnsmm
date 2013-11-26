@@ -9,10 +9,16 @@ DNSMM_HOME=/usr/local/lib
 
 mkdir $DNSMM_HOME/dnsmm
 
-cp ./lib/server.js $DNSMM_HOME/dnsmm/server.js
+cp -R lib  $DNSMM_HOME/dnsmm/
 
-mkdir $DNSMM_HOME/dnsmm/conf
+cp -R node_modules $DNSMM_HOME/dnsmm/
 
-cp ./conf/* $DNSMM_HOME/conf/
+mkdir /etc/dnsmm
+cp -R conf /etc/dnsmm/
 
 cp dnsmm.conf /etc/init/dnsmm.conf
+
+# make logging dir
+mkdir /var/log/dnsmm
+chown www-data /var/log/dnsmm
+

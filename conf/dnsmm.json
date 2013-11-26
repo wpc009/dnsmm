@@ -1,5 +1,16 @@
 {
 "upstream" : { "address":"202.120.2.101"},
+"logging" : {
+"level":"DEBUG",
+	"appenders" :[
+{"type":"file",
+"filename":"/var/log/dnsmm/dnsmm.log",
+"maxLogSize" : 1024,
+"backups":3,
+"replaceConsole":true
+}
+]
+},
 "mappings" : [
 {
 	"regx": "[\\w]+\\.google\\.com",
@@ -16,5 +27,6 @@
 	"type": "address",
 	"value": "192.168.1.3"
 }
-]
+],
+"port":8053
 }
